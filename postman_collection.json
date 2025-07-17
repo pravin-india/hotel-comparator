@@ -1,0 +1,35 @@
+{
+  "info": {
+    "name": "Hotel Comparator",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Hotels - Delhi",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/hotels?city=delhi"
+      }
+    },
+    {
+      "name": "Get Hotels - No Results",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/hotels?city=nocity"
+      }
+    },
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/health"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://your-ecs-alb-url"
+    }
+  ]
+}
